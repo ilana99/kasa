@@ -1,13 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './styles/index.sass';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import Header from './components/header/Header';
+import Footer from "./components/footer/footer"
+import Home from "./pages/home";
+import Erreurpage from "./pages/erreurpage"
+import Apropospage  from './pages/apropospage';
+import Locationpage from "./pages/locationpage"
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="location/:title" element={<Locationpage />} />
+        <Route path="/apropos" element={<Apropospage />} />
+        <Route path="*" element={<Erreurpage />} />
+      </Routes>
+      <Footer />
+    </Router>
   </React.StrictMode>
 );
 

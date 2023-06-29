@@ -1,0 +1,147 @@
+.fichelogement {
+  color: #FF6060;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.host .hostinfo {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+.host .hostinfo img {
+  width: 80px;
+  border-radius: 50%;
+}
+.host .hostinfo p {
+  width: 40%;
+}
+.host .stars {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-top: 20px;
+}
+.tags p {
+  padding: 10px 20px;
+  background: #FF6060;
+  color: white;
+  border-radius: 10px;
+  margin: 5px 5px 0 0;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.details .toggle {
+  width: 45%;
+}
+.details .toggle h3 {
+  margin: 0px;
+}
+.details .toggle p {
+  display: none;
+  background: #F6F6F6;
+  padding: 20px;
+  margin: 0px;
+  border-radius: 10px;
+  text-align: justify;
+}
+.details .toggle .showing {
+  display: block;
+}
+.details .toggle ul {
+  background: #F6F6F6;
+  padding: 20px;
+  margin: 0px;
+  border-radius: 10px;
+  list-style-type: none;
+}
+.details .toggle .toggleName {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FF6060;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: -5px;
+  z-index: 999;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  position: relative;
+}
+.carousel .logementphoto {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.carousel span {
+  position: absolute;
+}
+.carousel .arrowleft {
+  top: 50%;
+  left: 20px;
+  font-size: 45px;
+  color: white;
+  transform: translateY(-50%);
+}
+.carousel .arrowright {
+  top: 50%;
+  right: 20px;
+  font-size: 45px;
+  color: white;
+  transform: translateY(-50%);
+}
+.carousel p {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  color: white;
+}
+
+@media only screen and (max-width: 480px) {
+  .fichelogement .info {
+    flex-direction: column;
+  }
+  .fichelogement .info h3 {
+    margin: 0px;
+  }
+  .details {
+    flex-direction: column;
+  }
+  .details .toggle {
+    width: 100%;
+  }
+  .tags p {
+    padding: 10px;
+  }
+  .host {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .host .hostinfo {
+    margin: 0px;
+  }
+}/*# sourceMappingURL=fichelogement.css.map */
