@@ -30,8 +30,7 @@ function Fichelogement() {
     const equipementsArrow = useRef(null);
 
     const handleClick = (key) => {
-        setVisibility((prevState) => ({
-            ...prevState,
+        setVisibility((prevState) => ({ // updater function
             [key]: !prevState[key]
         }));
         if (key === "description" && descriptionArrow.current) {
