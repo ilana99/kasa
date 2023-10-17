@@ -130,7 +130,11 @@ function Fichelogement() {
                             ))}
                         </ul>
                     ) : (
-                        <p>Texte</p>
+                        <ul>
+                            {logement.equipments.map((equipment, equipement) => (
+                                <li key={equipement}>{equipment}</li>
+                            ))}
+                        </ul>
                     )}
 
 

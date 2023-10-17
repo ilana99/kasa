@@ -47,27 +47,8 @@
 }
 .details .toggle {
   width: 45%;
-}
-.details .toggle h3 {
-  margin: 0px;
-}
-.details .toggle p {
-  display: none;
-  background: #F6F6F6;
-  padding: 20px;
-  margin: 0px;
-  border-radius: 10px;
-  text-align: justify;
-}
-.details .toggle .showing {
-  display: block;
-}
-.details .toggle ul {
-  background: #F6F6F6;
-  padding: 20px;
-  margin: 0px;
-  border-radius: 10px;
-  list-style-type: none;
+  transition: all 0.5s;
+  overflow: hidden;
 }
 .details .toggle .toggleName {
   display: flex;
@@ -80,6 +61,33 @@
   margin-bottom: -5px;
   z-index: 999;
   position: relative;
+}
+.details .toggle .toggleName div {
+  transition: all 0.5s;
+}
+.details .toggle .toggleName h3 {
+  margin: 0px;
+}
+.details .toggle > *:last-child {
+  max-height: 0;
+  padding: 20px;
+  margin: 0px;
+  border-radius: 10px;
+  text-align: justify;
+  position: relative;
+  bottom: 200px;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, bottom 0.5s ease;
+}
+.details .toggle .showing {
+  display: block;
+  bottom: 0px;
+  max-height: 1000px;
+  opacity: 100;
+  background: #F6F6F6;
+}
+.details .toggle ul {
+  list-style-type: none;
 }
 
 .carousel {
