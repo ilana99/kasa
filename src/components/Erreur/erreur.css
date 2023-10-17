@@ -5,4 +5,7 @@
 .erreur h2 {
   font-size: 80px;
   font-weight: 600;
+}
+.erreur a {
+  color: #FF6060;
 }/*# sourceMappingURL=erreur.css.map */
