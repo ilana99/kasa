@@ -1,0 +1,40 @@
+.toggle {
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.toggle .toggleName {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FF6060;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: -5px;
+  z-index: 999;
+  position: relative;
+}
+.toggle .toggleName div {
+  transition: all 0.5s;
+}
+.toggle .toggleName h3 {
+  margin: 0px;
+}
+.toggle > *:last-child {
+  max-height: 0;
+  padding: 20px;
+  margin: 0px;
+  border-radius: 10px;
+  text-align: justify;
+  position: relative;
+  bottom: 200px;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, bottom 0.5s ease;
+}
+.toggle .showing {
+  display: block;
+  bottom: 0px;
+  max-height: 1000px;
+  opacity: 100;
+  background: #F6F6F6;
+}/*# sourceMappingURL=toggle.css.map */

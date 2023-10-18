@@ -1,19 +1,15 @@
 import logements from "../../logements.json";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useRef } from "react";
 import "./fichelogement.css"
 
 
 
 function Fichelogement() {
-
-    const arrow = <FontAwesomeIcon icon={faChevronDown} />
     const arrowRight = <FontAwesomeIcon icon={faChevronRight} />
     const arrowLeft = <FontAwesomeIcon icon={faChevronLeft} />
     const star = <FontAwesomeIcon icon={faStar} />
@@ -21,29 +17,7 @@ function Fichelogement() {
     const { title } = useParams();
     const logement = logements.find((location) => location.title === title); //trouve le logement correspondant au titre
 
-    const [hidden, setVisibility] = useState({
-        description: false,
-        equipements: false,
-
-    });
-    const descriptionArrow = useRef(null);
-    const equipementsArrow = useRef(null);
-
-    const handleClick = (key) => {
-        setVisibility((prevState) => ({ // updater function
-            [key]: !prevState[key]
-        }));
-        if (key === "description" && descriptionArrow.current) {
-            descriptionArrow.current.style.transform = descriptionArrow.current.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
-        };
-
-        if (key === "equipements" && equipementsArrow.current) {
-            equipementsArrow.current.style.transform = equipementsArrow.current.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
-        }
-    };
-
-
-
+  
     const [currentIndex, setCurrentIndex] = useState(0);
     let pictures = logement.pictures;
 
@@ -111,35 +85,6 @@ function Fichelogement() {
                 </div>
             </div>
 
-            <div className="details">
-                <div className="toggle">
-                    <div className="toggleName" onClick={() => handleClick("description")}>
-                        <h3 > Description </h3>
-                        <div ref={descriptionArrow}>{arrow}</div>
-                    </div>
-                    {hidden.description ? <p className="showing"> {logement.description} </p> : <p> {logement.description}</p>}
-                </div>
-                <div className="toggle" onClick={() => handleClick("equipements")}>
-                    <div className="toggleName"> <h3 > Équipements </h3>
-                        <div ref={equipementsArrow}>{arrow}</div>
-                    </div>
-                    {hidden.equipements ? (
-                        <ul className="showing">
-                            {logement.equipments.map((equipment, equipement) => (
-                                <li key={equipement}>{equipment}</li>
-                            ))}
-                        </ul>
-                    ) : (
-                        <ul>
-                            {logement.equipments.map((equipment, equipement) => (
-                                <li key={equipement}>{equipment}</li>
-                            ))}
-                        </ul>
-                    )}
-
-
-                </div>
-            </div>
         </section>
     )
 }
