@@ -1,14 +1,25 @@
 $corail: #FF6060
 
+.details 
+    display: flex
+    justify-content: space-between
+    gap: 20px
+    .toggle
+        width: 45%
+
+            
 .toggle
-        transition: all 0.5s  
+        transition: all 0.5s 
         overflow: hidden   
+        //width: 45%
+        font-size: 1rem
+        color: $corail
         .toggleName
             display: flex
             align-items: center
             justify-content: space-between
             background: $corail
-            padding: 10px 30px
+            padding: 10px 
             color: white
             border-radius: 10px
             margin-bottom: -5px
@@ -34,3 +45,12 @@ $corail: #FF6060
             max-height: 1000px
             opacity: 100
             background: #F6F6F6
+            color: $corail
+        ul  
+            list-style-type: none
+
+@media only screen and (max-width: 480px) // small screens    
+        .details
+            flex-direction: column
+        .toggle
+            width: 100%

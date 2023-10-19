@@ -1,16 +1,21 @@
 footer {
   background: black;
-  height: 100px;
   color: white;
+  position: relative;
   text-align: center;
   width: 100vw;
-  position: absolute;
-  right: 0px;
   padding-top: 50px;
   margin-top: 30px;
+  box-sizing: border-box;
 }
 
 .logo-footer {
   width: 100px;
   margin: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  footer {
+    margin-left: -10px;
+  }
 }/*# sourceMappingURL=footer.css.map */

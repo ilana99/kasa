@@ -1,8 +1,5 @@
-.fichelogement {
-  color: #FF6060;
-}
-
 .info {
+  color: #FF6060;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -40,67 +37,12 @@
   margin: 5px 5px 0 0;
 }
 
-.details {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-.details .toggle {
-  width: 45%;
-}
-.details .toggle ul {
-  list-style-type: none;
-}
-
-.carousel {
-  display: flex;
-  position: relative;
-}
-.carousel .logementphoto {
-  width: 100%;
-  height: 300px;
-  border-radius: 15px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-.carousel span {
-  position: absolute;
-}
-.carousel .arrowleft {
-  top: 50%;
-  left: 20px;
-  font-size: 45px;
-  color: white;
-  transform: translateY(-50%);
-}
-.carousel .arrowright {
-  top: 50%;
-  right: 20px;
-  font-size: 45px;
-  color: white;
-  transform: translateY(-50%);
-}
-.carousel p {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  color: white;
-}
-
 @media only screen and (max-width: 480px) {
-  .fichelogement .info {
+  .info {
     flex-direction: column;
   }
-  .fichelogement .info h3 {
+  .info h3 {
     margin: 0px;
-  }
-  .details {
-    flex-direction: column;
-  }
-  .details .toggle {
-    width: 100%;
   }
   .tags p {
     padding: 10px;

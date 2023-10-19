@@ -1,5 +1,6 @@
 import Fichelogement from "../components/fichelogement/fichelogement"
 import Toggle from "../components/toggle/toggle"
+import Carousel from "../components/carousel/carousel"
 import logements from "../logements.json";
 import { useParams } from "react-router-dom";
 
@@ -9,7 +10,8 @@ function Locationpage() {
     const logement = logements.find((location) => location.title === title); //trouve le logement correspondant au titre
 
     return (
-        <div>
+        <section>
+            <Carousel />
             <Fichelogement />
             <div className="details">
                 <Toggle content={logement.description} initialVisibility={false} section="Description"  />
@@ -21,9 +23,8 @@ function Locationpage() {
                      ))}
                  </ul>
                 } initialVisibility={false} section="Equipements"  />
-                
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -6,16 +6,29 @@ body {
   font-weight: 500;
   max-width: 978px;
   margin: auto;
-  padding: 10px;
+  padding: 0px 10px;
   box-sizing: border-box;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  padding: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
   body {
-    margin: 10px;
+    margin: 0;
+  }
+  #root {
+    align-items: stretch;
   }
 }/*# sourceMappingURL=index.css.map */

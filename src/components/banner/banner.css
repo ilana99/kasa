@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  height: 130px;
+  height: 200px;
   margin-bottom: 20px;
 }
 .banner img {
@@ -22,4 +22,10 @@
   color: white;
   text-align: center;
   width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+  .banner {
+    height: 160px;
+  }
 }/*# sourceMappingURL=banner.css.map */
