@@ -1,5 +1,5 @@
 import logements from "../../logements.json";
-import "./location.css";
+import "./card.css";
 import { Link } from 'react-router-dom';
 
 
