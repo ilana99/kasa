@@ -5,12 +5,12 @@ import { useState } from 'react';
 import { useRef } from "react";
 
 
-function Toggle({ content, initialVisibility, section }) {
+function Toggle({ content, section }) {
     const arrow = <FontAwesomeIcon icon={faChevronDown} />
    
     const arrowRef = useRef(null)
 
-    const [hidden, setVisibility] = useState(initialVisibility);
+    const [hidden, setVisibility] = useState(false);
 
     const handleClick = () => {
         setVisibility(!hidden)
