@@ -12,24 +12,21 @@ function Toggle({ content, initialVisibility, section }) {
 
     const [hidden, setVisibility] = useState(initialVisibility);
 
-    const handleClick = (key) => {
-        setVisibility((prevState) => ({
-            ...prevState,
-            [key]: !prevState[key]
-        }));
+    const handleClick = () => {
+        setVisibility(!hidden)
 
-        if (key === section && arrowRef.current) {
-            arrowRef.current.style.transform = arrowRef.current.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
+        if (arrowRef.current) {
+            arrowRef.current.style.transform = hidden ? "rotate(0deg)" : "rotate(180deg)";
         };
     };
 
     return (
-        <div className="toggle" onClick={() => handleClick(section)}>
+        <div className="toggle" onClick={() => handleClick()}>
             <div className="toggleName">
                 <h3> {section} </h3>
                 <div ref={arrowRef}>{arrow}</div>
             </div>
-            {hidden[section] ? (
+            {hidden ? (
                 <div className="showing">{content}</div>
             ) : (
                 <div>{content}</div>
