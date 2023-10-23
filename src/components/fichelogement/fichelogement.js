@@ -4,12 +4,14 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from 'react-router-dom';
 import "./fichelogement.css"
 
+
 function Fichelogement() {
    
     const star = <FontAwesomeIcon icon={faStar} />
 
-    const { title } = useParams();
-    const logement = logements.find((location) => location.title === title); //trouve le logement correspondant au titre
+    const { id } = useParams();
+    const logement = logements.find((location) => location.id === id); //trouve le logement correspondant au titre
+    
 
     const rating = logement.rating;
 
@@ -21,7 +23,7 @@ function Fichelogement() {
     return (
             <div className="info">
                 <div>
-                    <h2>{title}</h2>
+                    <h2>{logement.title}</h2>
                     <h3>{logement.location}</h3>
                     <div className="tags">
                         {logement.tags.map((tag, index) => (

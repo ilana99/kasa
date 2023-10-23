@@ -13,8 +13,10 @@
 }
 .header div {
   padding: 0px;
-  width: 50%;
   display: inline-flex;
+}
+.header div a:first-child {
+  padding: 0px 25px;
 }
 .header .active {
   text-decoration: underline;
@@ -28,6 +30,9 @@
 @media only screen and (max-width: 480px) {
   .header div {
     width: 90%;
+  }
+  .header div a:first-child {
+    padding: 0px;
   }
   .header a {
     padding: 5px 0px 5px 5px;

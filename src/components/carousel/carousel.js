@@ -9,8 +9,8 @@ import "./carousel.css"
 function Carousel() {
     const arrowRight = <FontAwesomeIcon icon={faChevronRight} />
     const arrowLeft = <FontAwesomeIcon icon={faChevronLeft} />
-    const { title } = useParams();
-    const logement = logements.find((location) => location.title === title); //trouve le logement correspondant au titre
+    const { id } = useParams();
+    const logement = logements.find((location) => location.id === id); //trouve le logement correspondant au titre
 
     const [currentIndex, setCurrentIndex] = useState(0);
     let pictures = logement.pictures;
